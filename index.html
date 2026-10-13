@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRIENDO SEGURO Chile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- CHILE RIBBON -->
+    <div class="chile-ribbon"></div>
+
+    <!-- NAVBAR NORMAL -->
+    <nav class="navbar" id="navbar-normal">
+        <div class="logo" onclick="showPage('landing')">
+            <i class="fas fa-car"></i>
+            ARRIENDO <span>SEGURO</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('landing')">Inicio</a>
+            <a href="#" onclick="showPage('how-it-works-landing')">Cómo Funciona</a>
+            <button class="btn btn-outline" onclick="showPage('login')">Iniciar Sesión</button>
+            <button class="btn btn-primary" onclick="showPage('register')">Registrarse</button>
+        </div>
+    </nav>
+
+    <!-- NAVBAR LOGEADO -->
+    <nav class="navbar-logged" id="navbar-logged" style="display: none;">
+        <div class="logo" onclick="showPage('role-selection')">
+            <i class="fas fa-car"></i>
+            ARRIENDO <span>SEGURO</span>
+        </div>
+    </nav>
+
+    <!-- PAGE: LANDING -->
+    <div id="landing" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="chile-badge">
+                    <img src="https://flagcdn.com/w40/cl.png" alt="Chile">
+                    Plataforma 100% Chilena
+                </div>
+                <h1>Arrienda autos <span>sin intermediarios</span></h1>
+                <p class="hero-subtitle">
+                    Conectamos arrendadores con arrendatarios de confianza en Chile. 
+                    Verificación de identidad, chat seguro y pagos directos.
+                </p>
+                
+                <div class="hero-images">
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400" alt="Auto">
+                        <div class="overlay">Autos verificados</div>
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1560179708-14d90e447987?w=400" alt="Entrega">
+                        <div class="overlay">Entrega segura</div>
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400" alt="Chile">
+                        <div class="overlay">Toda Chile</div>
+                    </div>
+                    <div class="hero-img-card">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400" alt="Confianza">
+                        <div class="overlay">Sin comisiones</div>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-large" onclick="showPage('register')">
+                        <i class="fas fa-user-plus"></i> Crear cuenta gratis
+                    </button>
+                    <button class="btn btn-outline btn-large" onclick="showPage('login')" style="color: white; border-color: white;">
+                        <i class="fas fa-sign-in-alt"></i> Ya tengo cuenta
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">2,500+</div>
+                <div class="stat-label">Autos disponibles</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15,000+</div>
+                <div class="stat-label">Usuarios verificados</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfacción</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">0%</div>
+                <div class="stat-label">Comisión</div>
+            </div>
+        </div>
+
+        <section class="features">
+            <div class="section-header">
+                <h2>¿Por qué elegir ARRIENDO SEGURO?</h2>
+                <p>La forma más confiable de arrendar autos en Chile</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Verificación Real</h3>
+                    <p>Foto de perfil obligatoria + verificación de vida. Sabes con quién tratas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-history"></i></div>
+                    <h3>Historial Completo</h3>
+                    <p>Reseñas, arriendos completados y estadísticas de cada usuario.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Recordatorios WhatsApp</h3>
+                    <p>Recibe alertas de pagos, devoluciones y mantenimientos en tu celular.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Contrato Digital Opcional</h3>
+                    <p>Contrato validado por abogado para mayor seguridad en cada arriendo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-calendar-week"></i></div>
+                    <h3>Precios Flexibles</h3>
+                    <p>Arrienda por día, semana o mes con descuentos especiales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Búsqueda por Ciudad</h3>
+                    <p>Encuentra autos disponibles específicamente en tu ciudad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works-landing">
+            <h2>¿Cómo funciona?</h2>
+            <p class="how-it-works-subtitle">Todo lo que necesitas saber para arrendar con confianza</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-user-check"></i>
+                    <h3>Regístrate y Verifica</h3>
+                    <p>Crea tu cuenta, sube foto de perfil y pasa la verificación de vida con tu cámara.</p>
+                    <ul class="step-features">
+                        <li><i class="fas fa-check"></i> Registro en 2 minutos</li>
+                        <li><i class="fas fa-check"></i> Verificación de identidad real</li>
+                        <li><i class="fas fa-check"></i> Perfil verificado visible para todos</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-route"></i>
+                    <h3>Elige tu Rol</h3>
+                    <p>¿Quieres buscar un auto o poner el tuyo a trabajar? Tú decides.</p>
+                    <ul class="step-features">
+                        <li><i class="fas fa-check"></i> Buscar autos disponibles en tu ciudad</li>
+                        <li><i class="fas fa-check"></i> Publicar tu auto y generar ingresos</li>
+                        <li><i class="fas fa-check"></i> Cambiar de rol cuando quieras</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-search"></i>
+                    <h3>Busca o Publica por Ciudad</h3>
+                    <p>Filtra autos por tu ciudad específica o publica indicando dónde está tu auto.</p>
+                    <ul class="step-features">
+                        <li><i class="fas fa-check"></i> Búsqueda por ciudad específica</li>
+                        <li><i class="fas fa-check"></i> Fotos de alta calidad obligatorias</li>
+                        <li><i class="fas fa-check"></i> Precios diarios, semanales y mensuales</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Contrato Digital Opcional</h3>
+                    <p>¿Quieren mayor seguridad? Generen un contrato digital validado por abogado.</p>
+                    <ul class="step-features">
+                        <li><i class="fas fa-check"></i> Condiciones del auto documentadas</li>
+                        <li><i class="fas fa-check"></i> Fecha de entrega y devolución</li>
+                        <li><i class="fas fa-check"></i> Consecuencias legales por incumplimiento</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <i class="fas fa-history"></i>
+                    <h3>Historial y Reseñas</h3>
+                    <p>Cada arriendo queda registrado. Acumula reseñas y construye tu reputación.</p>
+                    <ul class="step-features">
+                        <li><i class="fas fa-check"></i> Historial de autos arrendados</li>
+                        <li><i class="fas fa-check"></i> Historial de arrendatarios</li>
+                        <li><i class="fas fa-check"></i> Sistema de estrellas y comentarios</li>
+                    </ul>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Recordatorios Inteligentes</h3>
+                    <p>Recibe alertas por WhatsApp para no olvidar ningún detalle importante.</p>
+                    <ul class="step-features">
+                        <li><i class="fas fa-check"></i> Recordatorio de pagos pendientes</li>
+                        <li><i class="fas fa-check"></i> Alerta de día de devolución</li>
+                        <li><i class="fas fa-check"></i> Mantenimientos y fallas mecánicas</li>
+                    </ul>
+                    <div class="whatsapp-feature">
+                        <i class="fab fa-whatsapp"></i>
+                        <p>Conecta tu WhatsApp para recibir todas las alertas en tiempo real</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ARRIENDO SEGURO</h4>
+                    <p style="color: rgba(255,255,255,0.7);">
+                        La plataforma líder en Chile para arrendamiento de autos entre personas.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <a href="#">Inicio</a>
+                    <a href="#">Cómo Funciona</a>
+                    <a href="#">Términos</a>
+                    <a href="#">Contacto</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p style="color: rgba(255,255,255,0.7);">
+                        <i class="fas fa-envelope"></i> hola@arriendoseguro.cl<br>
+                        <i class="fas fa-phone"></i> +56 9 1234 5678
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 ARRIENDO SEGURO - Hecho con amor en Chile</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- PAGE: LOGIN CON VERIFICACIÓN SMS -->
+    <div id="login" class="page">
+        <div class="auth-container">
+            <div class="auth-box fade-in">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fas fa-car" style="font-size: 3rem; color: var(--chile-red);"></i>
+                </div>
+                <h2>Bienvenido de vuelta</h2>
+                <p class="auth-subtitle">Inicia sesión con tu teléfono verificado</p>
+                
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label><i class="fas fa-phone"></i> Número de teléfono</label>
+                        <div class="phone-input">
+                            <select><option>+56</option></select>
+                            <input type="tel" placeholder="9 1234 5678" required id="loginPhone">
+                        </div>
+                    </div>
+
+                    <button type="button" class="verify-sms-btn" id="sendSmsBtn" onclick="sendSMS()">
+                        <i class="fas fa-paper-plane"></i> Enviar código SMS
+                    </button>
+
+                    <div id="smsVerificationBox" style="display: none;">
+                        <div class="sms-verification-box">
+                            <h4><i class="fas fa-envelope-open-text"></i> Código enviado</h4>
+                            <p style="color: #555; margin-bottom: 15px;">Ingresa el código de 4 dígitos enviado a tu celular</p>
+                            
+                            <div class="sms-code-input">
+                                <input type="text" maxlength="1" onkeyup="moveToNext(this, 1)" placeholder="•">
+                                <input type="text" maxlength="1" onkeyup="moveToNext(this, 2)" placeholder="•">
+                                <input type="text" maxlength="1" onkeyup="moveToNext(this, 3)" placeholder="•">
+                                <input type="text" maxlength="1" onkeyup="moveToNext(this, 4)" placeholder="•">
+                            </div>
+                            
+                            <p class="resend-code" onclick="resendCode()">
+                                <i class="fas fa-redo"></i> ¿No recibiste el código? Reenviar
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 15px;">
+                            <i class="fas fa-check"></i> Verificar e Ingresar
+                        </button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>¿No tienes cuenta? <a href="#" onclick="showPage('register')">Regístrate</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: REGISTER CON TODAS LAS CIUDADES DE CHILE -->
+    <div id="register" class="page">
+        <div class="auth-container">
+            <div class="auth-box fade-in" style="max-width: 500px;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fas fa-user-plus" style="font-size: 3rem; color: var(--chile-red);"></i>
+                </div>
+                <h2>Crear cuenta</h2>
+                <p class="auth-subtitle">Paso 1 de 3: Datos básicos</p>
+                
+                <form onsubmit="handleRegister(event)">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido</label>
+                            <input type="text" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="form-group">
+                            <label>Fecha de nacimiento</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ciudad</label>
+                            <select required>
+                                <option value="">Selecciona tu ciudad</option>
+                                <optgroup label="Arica y Parinacota">
+                                    <option>Arica</option>
+                                    <option>Camarones</option>
+                                    <option>General Lagos</option>
+                                    <option>Putre</option>
+                                </optgroup>
+                                <optgroup label="Tarapacá">
+                                    <option>Alto Hospicio</option>
+                                    <option>Camiña</option>
+                                    <option>Colchane</option>
+                                    <option>Huara</option>
+                                    <option>Iquique</option>
+                                    <option>Pica</option>
+                                    <option>Pozo Almonte</option>
+                                </optgroup>
+                                <optgroup label="Antofagasta">
+                                    <option>Antofagasta</option>
+                                    <option>Calama</option>
+                                    <option>María Elena</option>
+                                    <option>Mejillones</option>
+                                    <option>Ollagüe</option>
+                                    <option>San Pedro de Atacama</option>
+                                    <option>Sierra Gorda</option>
+                                    <option>Taltal</option>
+                                    <option>Tocopilla</option>
+                                </optgroup>
+                                <optgroup label="Atacama">
+                                    <option>Alto del Carmen</option>
+                                    <option>Caldera</option>
+                                    <option>Chañaral</option>
+                                    <option>Copiapó</option>
+                                    <option>Diego de Almagro</option>
+                                    <option>Freirina</option>
+                                    <option>Huasco</option>
+                                    <option>Tierra Amarilla</option>
+                                    <option>Vallenar</option>
+                                </optgroup>
+                                <optgroup label="Coquimbo">
+                                    <option>Andacollo</option>
+                                    <option>Canela</option>
+                                    <option>Combarbalá</option>
+                                    <option>Coquimbo</option>
+                                    <option>Illapel</option>
+                                    <option>La Higuera</option>
+                                    <option>La Serena</option>
+                                    <option>Los Vilos</option>
+                                    <option>Monte Patria</option>
+                                    <option>Ovalle</option>
+                                    <option>Paihuano</option>
+                                    <option>Punitaqui</option>
+                                    <option>Río Hurtado</option>
+                                    <option>Salamanca</option>
+                                    <option>Vicuña</option>
+                                </optgroup>
+                                <optgroup label="Valparaíso">
+                                    <option>Algarrobo</option>
+                                    <option>Cabildo</option>
+                                    <option>Calera</option>
+                                    <option>Calle Larga</option>
+                                    <option>Cartagena</option>
+                                    <option>Casablanca</option>
+                                    <option>Catemu</option>
+                                    <option>Concón</option>
+                                    <option>El Quisco</option>
+                                    <option>El Tabo</option>
+                                    <option>Hijuelas</option>
+                                    <option>Isla de Pascua</option>
+                                    <option>Juan Fernández</option>
+                                    <option>La Cruz</option>
+                                    <option>La Ligua</option>
+                                    <option>Limache</option>
+                                    <option>Llaillay</option>
+                                    <option>Los Andes</option>
+                                    <option>Nogales</option>
+                                    <option>Olmué</option>
+                                    <option>Panquehue</option>
+                                    <option>Papudo</option>
+                                    <option>Petorca</option>
+                                    <option>Puchuncaví</option>
+                                    <option>Putaendo</option>
+                                    <option>Quillota</option>
+                                    <option>Quilpué</option>
+                                    <option>Quintero</option>
+                                    <option>Rinconada</option>
+                                    <option>San Antonio</option>
+                                    <option>San Esteban</option>
+                                    <option>San Felipe</option>
+                                    <option>Santa María</option>
+                                    <option>Santo Domingo</option>
+                                    <option>Valparaíso</option>
+                                    <option>Villa Alemana</option>
+                                    <option>Viña del Mar</option>
+                                    <option>Zapallar</option>
+                                </optgroup>
+                                <optgroup label="Metropolitana de Santiago">
+                                    <option>Alhué</option>
+                                    <option>Buin</option>
+                                    <option>Calera de Tango</option>
+                                    <option>Cerrillos</option>
+                                    <option>Cerro Navia</option>
+                                    <option>Colina</option>
+                                    <option>Conchalí</option>
+                                    <option>Curacaví</option>
+                                    <option>El Bosque</option>
+                                    <option>El Monte</option>
+                                    <option>Estación Central</option>
+                                    <option>Huechuraba</option>
+                                    <option>Independencia</option>
+                                    <option>Isla de Maipo</option>
+                                    <option>La Cisterna</option>
+                                    <option>La Florida</option>
+                                    <option>La Granja</option>
+                                    <option>La Pintana</option>
+                                    <option>La Reina</option>
+                                    <option>Lampa</option>
+                                    <option>Las Condes</option>
+                                    <option>Lo Barnechea</option>
+                                    <option>Lo Espejo</option>
+                                    <option>Lo Prado</option>
+                                    <option>Macul</option>
+                                    <option>Maipú</option>
+                                    <option>María Pinto</option>
+                                    <option>Melipilla</option>
+                                    <option>Ñuñoa</option>
+                                    <option>Padre Hurtado</option>
+                                    <option>Paine</option>
+                                    <option>Pedro Aguirre Cerda</option>
+                                    <option>Peñaflor</option>
+                                    <option>Peñalolén</option>
+                                    <option>Pirque</option>
+                                    <option>Providencia</option>
+                                    <option>Pudahuel</option>
+                                    <option>Puente Alto</option>
+                                    <option>Quilicura</option>
+                                    <option>Quinta Normal</option>
+                                    <option>Recoleta</option>
+                                    <option>Renca</option>
+                                    <option>San Bernardo</option>
+                                    <option>San Joaquín</option>
+                                    <option>San José de Maipo</option>
+                                    <option>San Miguel</option>
+                                    <option>San Pedro</option>
+                                    <option>San Ramón</option>
+                                    <option>Santiago</option>
+                                    <option>Talagante</option>
+                                    <option>Tiltil</option>
+                                    <option>Vitacura</option>
+                                </optgroup>
+                                <optgroup label="Libertador General Bernardo O'Higgins">
+                                    <option>Chimbarongo</option>
+                                    <option>Codegua</option>
+                                    <option>Coinco</option>
+                                    <option>Coltauco</option>
+                                    <option>Doñihue</option>
+                                    <option>Graneros</option>
+                                    <option>La Estrella</option>
+                                    <option>Las Cabras</option>
+                                    <option>Litueche</option>
+                                    <option>Lolol</option>
+                                    <option>Machalí</option>
+                                    <option>Malloa</option>
+                                    <option>Marchihue</option>
+                                    <option>Nancagua</option>
+                                    <option>Navidad</option>
+                                    <option>Olivar</option>
+                                    <option>Palmilla</option>
+                                    <option>Paredones</option>
+                                    <option>Peralillo</option>
+                                    <option>Peumo</option>
+                                    <option>Pichidegua</option>
+                                    <option>Pichilemu</option>
+                                    <option>Placilla</option>
+                                    <option>Pumanque</option>
+                                    <option>Quinta de Tilcoco</option>
+                                    <option>Rancagua</option>
+                                    <option>Rengo</option>
+                                    <option>Requínoa</option>
+                                    <option>San Fernando</option>
+                                    <option>San Vicente</option>
+                                    <option>Santa Cruz</option>
+                                </optgroup>
+                                <optgroup label="Maule">
+                                    <option>Cauquenes</option>
+                                    <option>Chanco</option>
+                                    <option>Colbún</option>
+                                    <option>Constitución</option>
+                                    <option>Curepto</option>
+                                    <option>Curicó</option>
+                                    <option>Empedrado</option>
+                                    <option>Hualañé</option>
+                                    <option>Licantén</option>
+                                    <option>Linares</option>
+                                    <option>Longaví</option>
+                                    <option>Maule</option>
+                                    <option>Molina</option>
+                                    <option>Parral</option>
+                                    <option>Pelarco</option>
+                                    <option>Pelluhue</option>
+                                    <option>Pencahue</option>
+                                    <option>Rauco</option>
+                                    <option>Retiro</option>
+                                    <option>Romeral</option>
+                                    <option>Río Claro</option>
+                                    <option>Sagrada Familia</option>
+                                    <option>San Clemente</option>
+                                    <option>San Javier</option>
+                                    <option>San Rafael</option>
+                                    <option>Talca</option>
+                                    <option>Teno</option>
+                                    <option>Vichuquén</option>
+                                    <option>Villa Alegre</option>
+                                    <option>Yerbas Buenas</option>
+                                </optgroup>
+                                <optgroup label="Ñuble">
+                                    <option>Bulnes</option>
+                                    <option>Chillán</option>
+                                    <option>Chillán Viejo</option>
+                                    <option>Cobquecura</option>
+                                    <option>Coelemu</option>
+                                    <option>Coihueco</option>
+                                    <option>El Carmen</option>
+                                    <option>Ninhue</option>
+                                    <option>Ñiquén</option>
+                                    <option>Pemuco</option>
+                                    <option>Pinto</option>
+                                    <option>Portezuelo</option>
+                                    <option>Quillón</option>
+                                    <option>Quirihue</option>
+                                    <option>Ránquil</option>
+                                    <option>San Carlos</option>
+                                    <option>San Fabián</option>
+                                    <option>San Ignacio</option>
+                                    <option>San Nicolás</option>
+                                    <option>Treguaco</option>
+                                    <option>Yungay</option>
+                                </optgroup>
+                                <optgroup label="Biobío">
+                                    <option>Alto Biobío</option>
+                                    <option>Antuco</option>
+                                    <option>Arauco</option>
+                                    <option>Cabrero</option>
+                                    <option>Cañete</option>
+                                    <option>Chiguayante</option>
+                                    <option>Concepción</option>
+                                    <option>Contulmo</option>
+                                    <option>Coronel</option>
+                                    <option>Curanilahue</option>
+                                    <option>Florida</option>
+                                    <option>Hualpén</option>
+                                    <option>Hualqui</option>
+                                    <option>Laja</option>
+                                    <option>Lebu</option>
+                                    <option>Los Álamos</option>
+                                    <option>Los Ángeles</option>
+                                    <option>Lota</option>
+                                    <option>Mulchén</option>
+                                    <option>Nacimiento</option>
+                                    <option>Negrete</option>
+                                    <option>Penco</option>
+                                    <option>Quilaco</option>
+                                    <option>Quilleco</option>
+                                    <option>San Pedro de la Paz</option>
+                                    <option>San Rosendo</option>
+                                    <option>Santa Bárbara</option>
+                                    <option>Santa Juana</option>
+                                    <option>Talcahuano</option>
+                                    <option>Tirúa</option>
+                                    <option>Tomé</option>
+                                    <option>Tucapel</option>
+                                    <option>Yumbel</option>
+                                </optgroup>
+                                <optgroup label="La Araucanía">
+                                    <option>Angol</option>
+                                    <option>Carahue</option>
+                                    <option>Cholchol</option>
+                                    <option>Collipulli</option>
+                                    <option>Cunco</option>
+                                    <option>Curacautín</option>
+                                    <option>Curarrehue</option>
+                                    <option>Ercilla</option>
+                                    <option>Freire</option>
+                                    <option>Galvarino</option>
+                                    <option>Gorbea</option>
+                                    <option>Lautaro</option>
+                                    <option>Loncoche</option>
+                                    <option>Lonquimay</option>
+                                    <option>Los Sauces</option>
+                                    <option>Lumaco</option>
+                                    <option>Melipeuco</option>
+                                    <option>Nueva Imperial</option>
+                                    <option>Padre Las Casas</option>
+                                    <option>Perquenco</option>
+                                    <option>Pitrufquén</option>
+                                    <option>Pucón</option>
+                                    <option>Puren</option>
+                                    <option>Renaico</option>
+                                    <option>Saavedra</option>
+                                    <option>Temuco</option>
+                                    <option>Teodoro Schmidt</option>
+                                    <option>Toltén</option>
+                                    <option>Traiguén</option>
+                                    <option>Victoria</option>
+                                    <option>Vilcún</option>
+                                    <option>Villarrica</option>
+                                </optgroup>
+                                <optgroup label="Los Ríos">
+                                    <option>Corral</option>
+                                    <option>Futrono</option>
+                                    <option>La Unión</option>
+                                    <option>Lago Ranco</option>
+                                    <option>Lanco</option>
+                                    <option>Los Lagos</option>
+                                    <option>Máfil</option>
+                                    <option>Mariquina</option>
+                                    <option>Paillaco</option>
+                                    <option>Panguipulli</option>
+                                    <option>Río Bueno</option>
+                                    <option>Valdivia</option>
+                                </optgroup>
+                                <optgroup label="Los Lagos">
+                                    <option>Ancud</option>
+                                    <option>Calbuco</option>
+                                    <option>Castro</option>
+                                    <option>Chaitén</option>
+                                    <option>Chonchi</option>
+                                    <option>Cochamó</option>
+                                    <option>Curaco de Vélez</option>
+                                    <option>Dalcahue</option>
+                                    <option>Fresia</option>
+                                    <option>Frutillar</option>
+                                    <option>Futaleufú</option>
+                                    <option>Hualaihué</option>
+                                    <option>Llanquihue</option>
+                                    <option>Los Muermos</option>
+                                    <option>Maullín</option>
+                                    <option>Osorno</option>
+                                    <option>Palena</option>
+                                    <option>Puerto Montt</option>
+                                    <option>Puerto Varas</option>
+                                    <option>Puqueldón</option>
+                                    <option>Purranque</option>
+                                    <option>Puyehue</option>
+                                    <option>Queilén</option>
+                                    <option>Quellón</option>
+                                    <option>Quemchi</option>
+                                    <option>Quinchao</option>
+                                    <option>Río Negro</option>
+                                    <option>San Juan de la Costa</option>
+                                    <option>San Pablo</option>
+                                </optgroup>
+                                <optgroup label="Aysén del General Carlos Ibáñez del Campo">
+                                    <option>Aysén</option>
+                                    <option>Chile Chico</option>
+                                    <option>Cisnes</option>
+                                    <option>Cochrane</option>
+                                    <option>Coihaique</option>
+                                    <option>Guaitecas</option>
+                                    <option>Lago Verde</option>
+                                    <option>O'Higgins</option>
+                                    <option>Río Ibáñez</option>
+                                    <option>Tortel</option>
+                                </optgroup>
+                                <optgroup label="Magallanes y de la Antártica Chilena">
+                                    <option>Antártica</option>
+                                    <option>Cabo de Hornos</option>
+                                    <option>Laguna Blanca</option>
+                                    <option>Natales</option>
+                                    <option>Porvenir</option>
+                                    <option>Primavera</option>
+                                    <option>Punta Arenas</option>
+                                    <option>Río Verde</option>
+                                    <option>San Gregorio</option>
+                                    <option>Timaukel</option>
+                                    <option>Torres del Paine</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Teléfono (para verificación SMS)</label>
+                        <div class="phone-input">
+                            <select><option>+56</option></select>
+                            <input type="tel" placeholder="9 1234 5678" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Continuar <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>¿Ya tienes cuenta? <a href="#" onclick="showPage('login')">Inicia sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: PHOTO UPLOAD -->
+    <div id="photo-upload" class="page">
+        <div class="photo-upload-container">
+            <div class="photo-upload-box fade-in">
+                <h2>Foto de Perfil</h2>
+                <p style="color: #666; margin-bottom: 30px;">Paso 2 de 3: Foto de perfil obligatoria</p>
+                
+                <div class="photo-upload-area" onclick="document.getElementById('photoInput').click()" id="uploadArea">
+                    <i class="fas fa-camera"></i>
+                    <p>Toca para subir foto</p>
+                    <input type="file" id="photoInput" accept="image/*" style="display: none;" onchange="previewPhoto(event)">
+                </div>
+
+                <div class="photo-requirements">
+                    <h4><i class="fas fa-exclamation-circle"></i> Requisitos obligatorios:</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Rostro visible y centrado</li>
+                        <li><i class="fas fa-check-circle"></i> Sin lentes de sol ni gorros</li>
+                        <li><i class="fas fa-check-circle"></i> Buena iluminación</li>
+                        <li><i class="fas fa-check-circle"></i> Fondo neutro preferible</li>
+                        <li><i class="fas fa-check-circle"></i> Sin otras personas en la foto</li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%;" onclick="goToLiveness()" id="continueBtn" disabled>
+                    Continuar a verificación de vida <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: LIVENESS -->
+    <div id="liveness" class="page">
+        <div class="liveness-container">
+            <div class="liveness-box fade-in">
+                <h2>Verificación de identidad</h2>
+                <p style="color: rgba(255,255,255,0.7);">Paso 3 de 3: Confirma que eres tú</p>
+                
+                <div class="camera-preview">
+                    <video id="video" autoplay playsinline></video>
+                    <div class="face-overlay"></div>
+                </div>
+
+                <div class="liveness-instruction" id="instruction">
+                    <i class="fas fa-head-side-view"></i> Gira tu cabeza lentamente a la derecha
+                </div>
+
+                <div class="liveness-actions">
+                    <button class="btn btn-outline" style="color: white; border-color: white;" onclick="showPage('photo-upload')">
+                        <i class="fas fa-arrow-left"></i> Volver
+                    </button>
+                    <button class="btn btn-primary" onclick="completeVerification()">
+                        <i class="fas fa-check"></i> Verificar
+                    </button>
+                </div>
+
+                <p style="margin-top: 30px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+                    <i class="fas fa-shield-alt"></i> Tus datos están protegidos y encriptados
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: REGISTRO EXITOSO -->
+    <div id="registro-exitoso" class="page">
+        <div class="auth-container">
+            <div class="auth-box fade-in" style="text-align: center;">
+                <div class="success-check">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <h2>¡Registro Exitoso!</h2>
+                <p style="color: #666; margin-bottom: 30px;">
+                    Tu identidad ha sido verificada correctamente
+                </p>
+                <p style="color: #666; margin-bottom: 30px;">
+                    Ahora puedes comenzar a usar ARRIENDO SEGURO
+                </p>
+                <button class="btn btn-primary" onclick="showPage('role-selection')" style="width: 100%;">
+                    <i class="fas fa-arrow-right"></i> Continuar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: SELECCIÓN DE ROL -->
+    <div id="role-selection" class="page">
+        <div class="role-selection">
+            <div class="role-container fade-in">
+                <div class="role-header">
+                    <div class="success-check">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h2>¡Verificación completada!</h2>
+                    <p>¿Qué quieres hacer hoy?</p>
+                </div>
+
+                <div class="role-cards">
+                    <div class="role-card" onclick="selectRole('arrendatario')">
+                        <div class="role-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Buscar autos disponibles</h3>
+                        <p>Encuentra el auto perfecto para tu próximo viaje o necesidad.</p>
+                        <ul class="role-features">
+                            <li><i class="fas fa-check"></i> Miles de autos verificados</li>
+                            <li><i class="fas fa-check"></i> Filtra por ciudad y precio</li>
+                            <li><i class="fas fa-check"></i> Chat directo con dueños</li>
+                            <li><i class="fas fa-check"></i> Recordatorios de pago</li>
+                        </ul>
+                        <button class="btn btn-primary role-btn">
+                            <i class="fas fa-car"></i> Buscar autos
+                        </button>
+                    </div>
+
+                    <div class="role-card" onclick="selectRole('arrendador')">
+                        <div class="role-icon" style="background: linear-gradient(135deg, var(--success), #2ecc71);">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Arrendar mi auto</h3>
+                        <p>Pon tu auto a trabajar y genera ingresos extras mensuales.</p>
+                        <ul class="role-features">
+                            <li><i class="fas fa-check"></i> Publica tu auto gratis</li>
+                            <li><i class="fas fa-check"></i> Tú pones el precio</li>
+                            <li><i class="fas fa-check"></i> Tú eliges a quién arrendar</li>
+                            <li><i class="fas fa-check"></i> Dashboard de ganancias</li>
+                        </ul>
+                        <button class="btn btn-primary role-btn" style="background: linear-gradient(135deg, var(--success), #2ecc71);">
+                            <i class="fas fa-plus-circle"></i> Publicar mi auto
+                        </button>
+                    </div>
+                </div>
+
+                <p style="margin-top: 40px; color: rgba(255,255,255,0.8);">
+                    <i class="fas fa-exchange-alt"></i> Puedes cambiar de rol en cualquier momento desde tu perfil
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: DASHBOARD ARRENDATARIO -->
+    <div id="dashboard-arrendatario" class="page">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Perfil" class="profile-photo">
+                <div class="profile-info">
+                    <h2>María González</h2>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verificado</span>
+                    <p style="color: #666; margin-top: 5px;"><i class="fas fa-map-marker-alt"></i> Providencia, Santiago</p>
+                    
+                    <div class="profile-stats">
+                        <div class="profile-stat">
+                            <div class="profile-stat-number positive">12</div>
+                            <div class="profile-stat-label">Arriendos completados</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-number">0</div>
+                            <div class="profile-stat-label">Atrasados</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-number" style="color: var(--warning);">4.9 <i class="fas fa-star"></i></div>
+                            <div class="profile-stat-label">Promedio reseñas</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-number">8</div>
+                            <div class="profile-stat-label">Reseñas recibidas</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: auto;">
+                    <button class="btn btn-outline" onclick="showPage('role-selection')">
+                        <i class="fas fa-exchange-alt"></i> Cambiar a arrendador
+                    </button>
+                </div>
+            </div>
+
+            <div class="reviews-section" style="margin-bottom: 30px;">
+                <div class="reviews-header">
+                    <h3><i class="fas fa-star"></i> Tus reseñas como arrendatario</h3>
+                    <span style="color: #666;">Promedio: <strong style="color: var(--warning);">4.9 <i class="fas fa-star"></i></strong></span>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dueño">
+                            <div>
+                                <strong>Juan Pérez</strong>
+                                <p style="font-size: 0.85rem; color: #666;">Toyota Corolla 2020</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="review-text">
+                        "Excelente arrendatario. Muy puntual con los pagos y cuidadoso con el auto. 
+                        Lo devolvió en perfectas condiciones y antes del plazo acordado. 100% recomendado."
+                    </p>
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 10px;">Enero 2025</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <aside class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#" onclick="showPage('search-autos')"><i class="fas fa-search"></i> Buscar Autos</a></li>
+                        <li><a href="#"><i class="fas fa-list"></i> Mis Solicitudes</a></li>
+                        <li><a href="#" onclick="showPage('chat')"><i class="fas fa-comments"></i> Mensajes</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i> Favoritos</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i> Historial</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+                        <li><a href="#" onclick="logout()" style="color: var(--chile-red);"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </aside>
+
+                <main class="main-content">
+                    <div style="background: linear-gradient(135deg, var(--chile-red), var(--chile-blue)); color: white; border-radius: 20px; padding: 40px; margin-bottom: 30px;">
+                        <h2 style="margin-bottom: 10px;"><i class="fas fa-search"></i> Buscar autos disponibles</h2>
+                        <p>Encuentra el auto perfecto para tu próximo viaje</p>
+                        <div style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                            <select style="padding: 15px 25px; border-radius: 12px; border: none; font-size: 1rem;">
+                                <option>Santiago</option>
+                                <option>Valparaíso</option>
+                                <option>Concepción</option>
+                            </select>
+                            <input type="text" placeholder="Fechas" style="padding: 15px 25px; border-radius: 12px; border: none; font-size: 1rem;">
+                            <button class="btn btn-primary" onclick="showPage('search-autos')" style="background: white; color: var(--chile-red);">
+                                <i class="fas fa-search"></i> Buscar
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 20px;">Recomendados para ti</h3>
+                    <div class="car-grid">
+                        <div class="car-card" onclick="showPage('detalle-auto')">
+                            <div class="car-image">
+                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400" alt="Auto">
+                                <div class="car-price">$25.000/día</div>
+                                <div class="car-price-weekly">$150.000/semana</div>
+                            </div>
+                            <div class="car-info">
+                                <h3>Toyota Corolla 2020</h3>
+                                <div class="car-meta">
+                                    <span><i class="fas fa-gas-pump"></i> Bencina</span>
+                                    <span><i class="fas fa-cog"></i> Automático</span>
+                                </div>
+                                <div class="car-owner">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dueño">
+                                    <div>
+                                        <strong>Juan P.</strong>
+                                        <p style="font-size: 0.85rem; color: #666;"><i class="fas fa-star" style="color: var(--warning);"></i> 4.9</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: SEARCH AUTOS -->
+    <div id="search-autos" class="page">
+        <div class="dashboard-container">
+            <div class="city-filter-section">
+                <h3><i class="fas fa-map-marker-alt"></i> Selecciona tu ciudad</h3>
+                <p style="color: #666; margin-bottom: 20px;">Solo se mostrarán autos disponibles en la ciudad que selecciones</p>
+                <select class="city-select-large" onchange="filterByCity(this.value)">
+                    <option value="">Todas las ciudades</option>
+                    <option value="santiago" selected>Santiago</option>
+                    <option value="valparaiso">Valparaíso</option>
+                    <option value="concepcion">Concepción</option>
+                    <option value="laserena">La Serena</option>
+                    <option value="antofagasta">Antofagasta</option>
+                    <option value="temuco">Temuco</option>
+                    <option value="puertomontt">Puerto Montt</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 10px;">
+                    <i class="fas fa-map-marker-alt"></i> Autos disponibles en: 
+                    <span style="color: var(--chile-red);">Santiago</span>
+                </h3>
+                <p style="color: #666;">Se encontraron 245 autos en esta ciudad</p>
+            </div>
+
+            <div class="car-grid">
+                <div class="car-card" onclick="showPage('detalle-auto')">
+                    <div style="position: absolute; top: 15px; left: 15px; z-index: 10;">
+                        <span class="city-badge">
+                            <i class="fas fa-map-marker-alt"></i> Santiago
+                        </span>
+                    </div>
+                    <div class="car-image">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400" alt="Auto">
+                        <div class="car-price">$25.000/día</div>
+                        <div class="car-price-weekly">$150.000/semana</div>
+                    </div>
+                    <div class="car-info">
+                        <h3>Toyota Corolla 2020</h3>
+                        <div class="car-meta">
+                            <span><i class="fas fa-gas-pump"></i> Bencina</span>
+                            <span><i class="fas fa-cog"></i> Automático</span>
+                        </div>
+                        <div class="car-owner">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dueño">
+                            <div>
+                                <strong>Juan P.</strong>
+                                <p style="font-size: 0.85rem; color: #666;"><i class="fas fa-star" style="color: var(--warning);"></i> 4.9 (12 reseñas)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: DASHBOARD ARRENDADOR -->
+    <div id="dashboard-arrendador" class="page">
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Perfil" class="profile-photo">
+                <div class="profile-info">
+                    <h2>Juan Pérez</h2>
+                    <span class="verified-badge"><i class="fas fa-check-circle"></i> Verificado</span>
+                    <p style="color: #666; margin-top: 5px;"><i class="fas fa-map-marker-alt"></i> Ñuñoa, Santiago</p>
+                    
+                    <div class="profile-stats">
+                        <div class="profile-stat">
+                            <div class="profile-stat-number positive">28</div>
+                            <div class="profile-stat-label">Arriendos completados</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-number" style="color: var(--warning);">4.8 <i class="fas fa-star"></i></div>
+                            <div class="profile-stat-label">Promedio reseñas</div>
+                        </div>
+                        <div class="profile-stat">
+                            <div class="profile-stat-number">$2.4M</div>
+                            <div class="profile-stat-label">Ganancias totales</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-left: auto;">
+                    <button class="btn btn-outline" onclick="showPage('role-selection')">
+                        <i class="fas fa-exchange-alt"></i> Cambiar a arrendatario
+                    </button>
+                </div>
+            </div>
+
+            <div id="dashboard-content-ganancias" class="dashboard-content-section">
+                <h2 style="margin-bottom: 25px;"><i class="fas fa-chart-line"></i> Mis Ganancias por Auto</h2>
+                
+                <div class="car-earnings-container">
+                    <div class="car-earnings-card">
+                        <div class="car-earnings-header">
+                            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400" alt="Toyota Corolla" class="car-earnings-img">
+                            <div class="car-earnings-info">
+                                <h3>Toyota Corolla 2020</h3>
+                                <p>Patente: ABC-123</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Santiago, RM</p>
+                            </div>
+                        </div>
+                        <div class="car-earnings-body">
+                            <div class="earnings-stats-grid">
+                                <div class="stat-box">
+                                    <label>Ingreso Diario</label>
+                                    <value>$25.000</value>
+                                </div>
+                                <div class="stat-box">
+                                    <label>Ingreso Semanal</label>
+                                    <value>$150.000</value>
+                                </div>
+                                <div class="stat-box">
+                                    <label>Ingreso Mensual</label>
+                                    <value>$600.000</value>
+                                </div>
+                            </div>
+                            
+                            <div class="expenses-section">
+                                <h4><i class="fas fa-wrench"></i> Gastos de Mantenimiento</h4>
+                                <div class="expense-item">
+                                    <span>Seguro mensual</span>
+                                    <span>-$45.000</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span>Mantenimiento</span>
+                                    <span>-$35.000</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span>Lavado y detalle</span>
+                                    <span>-$15.000</span>
+                                </div>
+                                <div class="expense-item" style="font-weight: bold; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px; margin-top: 10px;">
+                                    <span>Total Gastos</span>
+                                    <span>-$95.000</span>
+                                </div>
+                            </div>
+                            
+                            <div class="net-profit-box">
+                                <h4><i class="fas fa-coins"></i> GANANCIA NETA MENSUAL</h4>
+                                <div class="amount">$505.000 CLP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-earnings-card">
+                        <div class="car-earnings-header">
+                            <img src="https://images.unsplash.com/photo-1503376763036-066120622c74?w=400" alt="Honda Civic" class="car-earnings-img">
+                            <div class="car-earnings-info">
+                                <h3>Honda Civic 2019</h3>
+                                <p>Patente: XYZ-789</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Valparaíso, V Región</p>
+                            </div>
+                        </div>
+                        <div class="car-earnings-body">
+                            <div class="earnings-stats-grid">
+                                <div class="stat-box">
+                                    <label>Ingreso Diario</label>
+                                    <value>$22.000</value>
+                                </div>
+                                <div class="stat-box">
+                                    <label>Ingreso Semanal</label>
+                                    <value>$132.000</value>
+                                </div>
+                                <div class="stat-box">
+                                    <label>Ingreso Mensual</label>
+                                    <value>$528.000</value>
+                                </div>
+                            </div>
+                            
+                            <div class="expenses-section">
+                                <h4><i class="fas fa-wrench"></i> Gastos de Mantenimiento</h4>
+                                <div class="expense-item">
+                                    <span>Seguro mensual</span>
+                                    <span>-$42.000</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span>Mantenimiento</span>
+                                    <span>-$28.000</span>
+                                </div>
+                                <div class="expense-item">
+                                    <span>Lavado y detalle</span>
+                                    <span>-$12.000</span>
+                                </div>
+                                <div class="expense-item" style="font-weight: bold; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 10px; margin-top: 10px;">
+                                    <span>Total Gastos</span>
+                                    <span>-$82.000</span>
+                                </div>
+                            </div>
+                            
+                            <div class="net-profit-box">
+                                <h4><i class="fas fa-coins"></i> GANANCIA NETA MENSUAL</h4>
+                                <div class="amount">$446.000 CLP</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dashboard-content-mantenimiento" class="dashboard-content-section" style="display: none;">
+                <div class="maintenance-scheduler">
+                    <h3><i class="fas fa-wrench"></i> Programar Mantenimiento</h3>
+                    
+                    <div class="maintenance-car-select">
+                        <label>Seleccionar Auto</label>
+                        <select id="mantenimientoAuto" style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid #e0e0e0; font-size: 1rem;">
+                            <option value="">Selecciona un auto</option>
+                            <option value="auto1">Toyota Corolla 2020 - ABC-123</option>
+                            <option value="auto2">Honda Civic 2019 - XYZ-789</option>
+                        </select>
+                    </div>
+                    
+                    <div class="maintenance-form">
+                        <div class="form-group">
+                            <label>Tipo de Mantenimiento</label>
+                            <select id="tipoMantenimiento" style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid #e0e0e0;">
+                                <option value="cambio_aceite">Cambio de Aceite</option>
+                                <option value="revision_general">Revisión General</option>
+                                <option value="cambio_frenos">Cambio de Frenos</option>
+                                <option value="rotacion_neumaticos">Rotación de Neumáticos</option>
+                                <option value="alineacion">Alineación y Balanceo</option>
+                                <option value="revision_electrica">Revisión Eléctrica</option>
+                                <option value="cambio_filtros">Cambio de Filtros</option>
+                                <option value="lavado_detalle">Lavado y Detalle</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Programada</label>
+                            <input type="date" id="fechaMantenimiento" style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid #e0e0e0;">
+                        </div>
+                        <div class="form-group">
+                            <label>Costo Estimado (CLP)</label>
+                            <input type="number" id="costoMantenimiento" placeholder="Ej: 50000" style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid #e0e0e0;">
+                        </div>
+                        <div class="form-group">
+                            <label>Taller / Mecánico</label>
+                            <input type="text" id="tallerMantenimiento" placeholder="Nombre del taller" style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid #e0e0e0;">
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="margin-top: 20px;" onclick="programarMantenimiento()">
+                        <i class="fas fa-calendar-plus"></i> Programar Mantenimiento
+                    </button>
+                </div>
+                
+                <div class="maintenance-list">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-list"></i> Próximos Mantenimientos</h3>
+                    
+                    <div class="maintenance-item upcoming">
+                        <div>
+                            <strong><i class="fas fa-car"></i> Toyota Corolla - Cambio de Aceite</strong>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">
+                                <i class="fas fa-calendar"></i> 15 de Octubre, 2025<br>
+                                <i class="fas fa-bell"></i> Recordatorio: 13 de Octubre
+                            </p>
+                        </div>
+                        <span style="color: var(--warning); font-weight: bold;">Próximo</span>
+                    </div>
+                    
+                    <div class="maintenance-item">
+                        <div>
+                            <strong><i class="fas fa-car"></i> Honda Civic - Revisión General</strong>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">
+                                <i class="fas fa-calendar"></i> 28 de Octubre, 2025<br>
+                                <i class="fas fa-bell"></i> Recordatorio: 26 de Octubre
+                            </p>
+                        </div>
+                        <span style="color: var(--chile-blue); font-weight: bold;">Programado</span>
+                    </div>
+                    
+                    <div class="maintenance-item overdue">
+                        <div>
+                            <strong><i class="fas fa-car"></i> Toyota Corolla - Rotación Neumáticos</strong>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">
+                                <i class="fas fa-exclamation-triangle"></i> Venció: 20 de Septiembre, 2025
+                            </p>
+                        </div>
+                        <span style="color: var(--danger); font-weight: bold;">Vencido</span>
+                    </div>
+
+                    <h3 style="margin: 30px 0 20px;"><i class="fas fa-history"></i> Historial de Mantenimiento</h3>
+                    
+                    <div class="maintenance-item" style="border-left-color: var(--success);">
+                        <div>
+                            <strong><i class="fas fa-car"></i> Toyota Corolla - Lavado y Detalle</strong>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 5px;">
+                                <i class="fas fa-check-circle"></i> Completado: 10 de Septiembre, 2025<br>
+                                <i class="fas fa-dollar-sign"></i> Costo: $15.000 CLP
+                            </p>
+                        </div>
+                        <span style="color: var(--success); font-weight: bold;"><i class="fas fa-check"></i> Completado</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dashboard-content-solicitudes" class="dashboard-content-section" style="display: none;">
+                <div class="requests-tabs">
+                    <button class="requests-tab active" onclick="showRequestsTab('nuevas', this)">Nuevas Solicitudes</button>
+                    <button class="requests-tab" onclick="showRequestsTab('historial', this)">Historial de Arriendos</button>
+                    <button class="requests-tab" onclick="showRequestsTab('futuros', this)">Próximos Arriendos</button>
+                </div>
+                
+                <div id="requests-nuevas-content">
+                    <h3 style="margin-bottom: 20px;">Solicitudes Pendientes</h3>
+                    
+                    <div class="request-card">
+                        <div class="request-info">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Usuario" class="request-avatar">
+                            <div>
+                                <h4>Carlos Mendoza</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Quiere arrendar: Toyota Corolla</p>
+                                <p style="font-size: 0.85rem; color: #888;"><i class="fas fa-calendar"></i> 1-5 de Octubre, 2025 (4 días)</p>
+                                <p style="font-size: 0.85rem; color: var(--success);"><i class="fas fa-check-circle"></i> Usuario verificado</p>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn-small btn-accept" onclick="aceptarSolicitud(this)">Aceptar</button>
+                            <button class="btn-small btn-reject">Rechazar</button>
+                            <button class="btn-small btn-chat" disabled>Chat</button>
+                        </div>
+                    </div>
+                    
+                    <div class="request-card">
+                        <div class="request-info">
+                            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Usuario" class="request-avatar">
+                            <div>
+                                <h4>María González</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Quiere arrendar: Honda Civic</p>
+                                <p style="font-size: 0.85rem; color: #888;"><i class="fas fa-calendar"></i> 10-15 de Octubre, 2025 (5 días)</p>
+                                <p style="font-size: 0.85rem; color: var(--success);"><i class="fas fa-check-circle"></i> Usuario verificado</p>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn-small btn-accept" onclick="aceptarSolicitud(this)">Aceptar</button>
+                            <button class="btn-small btn-reject">Rechazar</button>
+                            <button class="btn-small btn-chat" disabled>Chat</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="requests-historial-content" style="display: none;">
+                    <h3 style="margin-bottom: 20px;">Historial de Arriendos Completados</h3>
+                    
+                    <div class="request-card">
+                        <div class="request-info">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Usuario" class="request-avatar">
+                            <div>
+                                <h4>Juan Pérez</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Arrendó: Toyota Corolla</p>
+                                <p style="font-size: 0.85rem; color: #888;"><i class="fas fa-calendar"></i> 15-20 de Septiembre, 2025 (5 días)</p>
+                                <p style="font-size: 0.85rem; color: var(--success);"><i class="fas fa-check-circle"></i> Completado - $125.000 CLP</p>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-outline btn-small">Ver Detalles</button>
+                        </div>
+                    </div>
+                    
+                    <div class="request-card">
+                        <div class="request-info">
+                            <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Usuario" class="request-avatar">
+                            <div>
+                                <h4>Ana Silva</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Arrendó: Honda Civic</p>
+                                <p style="font-size: 0.85rem; color: #888;"><i class="fas fa-calendar"></i> 1-3 de Septiembre, 2025 (2 días)</p>
+                                <p style="font-size: 0.85rem; color: var(--success);"><i class="fas fa-check-circle"></i> Completado - $44.000 CLP</p>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn btn-outline btn-small">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="requests-futuros-content" style="display: none;">
+                    <h3 style="margin-bottom: 20px;">Próximos Arriendos Confirmados</h3>
+                    
+                    <div class="request-card">
+                        <div class="request-info">
+                            <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Usuario" class="request-avatar">
+                            <div>
+                                <h4>Laura Torres</h4>
+                                <p style="font-size: 0.9rem; color: #666;">Arrendará: Toyota Corolla</p>
+                                <p style="font-size: 0.85rem; color: #888;"><i class="fas fa-calendar"></i> 20-25 de Octubre, 2025 (5 días)</p>
+                                <p style="font-size: 0.85rem; color: var(--chile-blue);"><i class="fas fa-check-circle"></i> Confirmado - $125.000 CLP</p>
+                            </div>
+                        </div>
+                        <div class="request-actions">
+                            <button class="btn-small btn-chat">Chat</button>
+                            <button class="btn btn-outline btn-small">Ver Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dashboard-content-mensajes" class="dashboard-content-section" style="display: none;">
+                <div style="background: #f8f9fa; border-radius: 20px; padding: 40px; text-align: center;">
+                    <div style="font-size: 64px; margin-bottom: 20px;">💬</div>
+                    <h3>No tienes conversaciones activas</h3>
+                    <p style="color: #666; margin-top: 15px;">Los mensajes se activarán cuando aceptes una solicitud de arriendo</p>
+                    <button class="btn btn-primary" style="margin-top: 30px;" onclick="showDashboardSection('solicitudes')">
+                        Ver Solicitudes
+                    </button>
+                </div>
+            </div>
+
+            <div id="dashboard-content-configuracion" class="dashboard-content-section" style="display: none;">
+                <h2 style="margin-bottom: 30px;"><i class="fas fa-cog"></i> Configuración</h2>
+                
+                <div class="settings-section">
+                    <div class="settings-item" onclick="contactarSoporte()">
+                        <div>
+                            <h4><i class="fas fa-headset"></i> Contactar Soporte</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Habla con nuestro equipo de ayuda</p>
+                        </div>
+                        <span style="color: var(--chile-blue); font-size: 1.5rem;">→</span>
+                    </div>
+                    
+                    <div class="settings-item danger" onclick="eliminarCuenta()">
+                        <div>
+                            <h4 style="color: var(--danger);"><i class="fas fa-trash-alt"></i> Eliminar Cuenta</h4>
+                            <p style="font-size: 0.9rem; color: #666;">Esta acción no se puede deshacer</p>
+                        </div>
+                        <span style="color: var(--danger); font-size: 1.5rem;">→</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <aside class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li><a href="#" class="active" onclick="showDashboardSection('ganancias', this)"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="#" onclick="showDashboardSection('mantenimiento', this)"><i class="fas fa-wrench"></i> Mantenimiento</a></li>
+                        <li><a href="#" onclick="showDashboardSection('solicitudes', this)"><i class="fas fa-handshake"></i> Solicitudes</a></li>
+                        <li><a href="#" onclick="showDashboardSection('mensajes', this)"><i class="fas fa-comments"></i> Mensajes</a></li>
+                        <li><a href="#" onclick="showDashboardSection('configuracion', this)"><i class="fas fa-cog"></i> Configuración</a></li>
+                        <li><a href="#" onclick="logout()" style="color: var(--chile-red);"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </aside>
+
+                <main class="main-content" id="arrendador-main-content">
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: PUBLICAR AUTO -->
+    <div id="publicar-auto" class="page">
+        <div class="dashboard-container">
+            <div class="main-content" style="max-width: 900px; margin: 40px auto;">
+                <h2 style="margin-bottom: 30px;"><i class="fas fa-car"></i> Publicar mi auto</h2>
+                
+                <form onsubmit="handlePublicar(event)">
+                    <div class="form-group">
+                        <label>Fotos del vehículo (mínimo 6 fotos)</label>
+                        <div class="photo-grid-6">
+                            <div class="photo-upload-box-6" onclick="triggerFileInput(1)">
+                                <i class="fas fa-camera"></i>
+                                <span>Foto 1</span>
+                                <input type="file" id="photo1" accept="image/*" style="display: none;" onchange="previewPhoto6(this, 1)">
+                            </div>
+                            <div class="photo-upload-box-6" onclick="triggerFileInput(2)">
+                                <i class="fas fa-camera"></i>
+                                <span>Foto 2</span>
+                                <input type="file" id="photo2" accept="image/*" style="display: none;" onchange="previewPhoto6(this, 2)">
+                            </div>
+                            <div class="photo-upload-box-6" onclick="triggerFileInput(3)">
+                                <i class="fas fa-camera"></i>
+                                <span>Foto 3</span>
+                                <input type="file" id="photo3" accept="image/*" style="display: none;" onchange="previewPhoto6(this, 3)">
+                            </div>
+                            <div class="photo-upload-box-6" onclick="triggerFileInput(4)">
+                                <i class="fas fa-camera"></i>
+                                <span>Foto 4</span>
+                                <input type="file" id="photo4" accept="image/*" style="display: none;" onchange="previewPhoto6(this, 4)">
+                            </div>
+                            <div class="photo-upload-box-6" onclick="triggerFileInput(5)">
+                                <i class="fas fa-camera"></i>
+                                <span>Foto 5</span>
+                                <input type="file" id="photo5" accept="image/*" style="display: none;" onchange="previewPhoto6(this, 5)">
+                            </div>
+                            <div class="photo-upload-box-6" onclick="triggerFileInput(6)">
+                                <i class="fas fa-camera"></i>
+                                <span>Foto 6</span>
+                                <input type="file" id="photo6" accept="image/*" style="display: none;" onchange="previewPhoto6(this, 6)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="patente-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h4><i class="fas fa-ban"></i> ¡IMPORTANTE! No muestres la patente en las fotos</h4>
+                            <p>
+                                Por seguridad, <strong>evita subir fotos donde se vea la patente de tu auto</strong>. 
+                                Esto previene que personas malintencionadas puedan clonar tu patente o usar tu 
+                                vehículo para actividades ilícitas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Marca del vehículo</label>
+                        <input type="text" placeholder="Ej: Toyota, Chevrolet, BMW, etc." required style="padding: 15px; font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-tachometer-alt"></i> Cilindrada del motor</label>
+                        <select required style="padding: 15px; font-size: 1rem;">
+                            <option value="">Selecciona la cilindrada</option>
+                            <option>800 cc</option>
+                            <option>1.000 cc (1.0L)</option>
+                            <option>1.200 cc (1.2L)</option>
+                            <option>1.400 cc (1.4L)</option>
+                            <option>1.600 cc (1.6L)</option>
+                            <option>1.800 cc (1.8L)</option>
+                            <option>2.000 cc (2.0L)</option>
+                            <option>2.200 cc (2.2L)</option>
+                            <option>2.400 cc (2.4L)</option>
+                            <option>2.500 cc (2.5L)</option>
+                            <option>2.700 cc (2.7L)</option>
+                            <option>3.000 cc (3.0L)</option>
+                            <option>3.200 cc (3.2L)</option>
+                            <option>3.500 cc (3.5L)</option>
+                            <option>4.000 cc (4.0L)</option>
+                            <option>4.500 cc (4.5L)</option>
+                            <option>5.000 cc (5.0L) o más</option>
+                            <option>Eléctrico / Híbrido</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Ciudad donde está el auto</label>
+                        <select required style="padding: 15px; font-size: 1rem;">
+                            <option value="">Selecciona la ciudad</option>
+                            <optgroup label="Arica y Parinacota">
+                                <option>Arica</option>
+                                <option>Camarones</option>
+                                <option>General Lagos</option>
+                                <option>Putre</option>
+                            </optgroup>
+                            <optgroup label="Tarapacá">
+                                <option>Alto Hospicio</option>
+                                <option>Camiña</option>
+                                <option>Colchane</option>
+                                <option>Huara</option>
+                                <option>Iquique</option>
+                                <option>Pica</option>
+                                <option>Pozo Almonte</option>
+                            </optgroup>
+                            <optgroup label="Antofagasta">
+                                <option>Antofagasta</option>
+                                <option>Calama</option>
+                                <option>María Elena</option>
+                                <option>Mejillones</option>
+                                <option>Ollagüe</option>
+                                <option>San Pedro de Atacama</option>
+                                <option>Sierra Gorda</option>
+                                <option>Taltal</option>
+                                <option>Tocopilla</option>
+                            </optgroup>
+                            <optgroup label="Atacama">
+                                <option>Alto del Carmen</option>
+                                <option>Caldera</option>
+                                <option>Chañaral</option>
+                                <option>Copiapó</option>
+                                <option>Diego de Almagro</option>
+                                <option>Freirina</option>
+                                <option>Huasco</option>
+                                <option>Tierra Amarilla</option>
+                                <option>Vallenar</option>
+                            </optgroup>
+                            <optgroup label="Coquimbo">
+                                <option>Andacollo</option>
+                                <option>Canela</option>
+                                <option>Combarbalá</option>
+                                <option>Coquimbo</option>
+                                <option>Illapel</option>
+                                <option>La Higuera</option>
+                                <option>La Serena</option>
+                                <option>Los Vilos</option>
+                                <option>Monte Patria</option>
+                                <option>Ovalle</option>
+                                <option>Paihuano</option>
+                                <option>Punitaqui</option>
+                                <option>Río Hurtado</option>
+                                <option>Salamanca</option>
+                                <option>Vicuña</option>
+                            </optgroup>
+                            <optgroup label="Valparaíso">
+                                <option>Algarrobo</option>
+                                <option>Cabildo</option>
+                                <option>Calera</option>
+                                <option>Calle Larga</option>
+                                <option>Cartagena</option>
+                                <option>Casablanca</option>
+                                <option>Catemu</option>
+                                <option>Concón</option>
+                                <option>El Quisco</option>
+                                <option>El Tabo</option>
+                                <option>Hijuelas</option>
+                                <option>Isla de Pascua</option>
+                                <option>Juan Fernández</option>
+                                <option>La Cruz</option>
+                                <option>La Ligua</option>
+                                <option>Limache</option>
+                                <option>Llaillay</option>
+                                <option>Los Andes</option>
+                                <option>Nogales</option>
+                                <option>Olmué</option>
+                                <option>Panquehue</option>
+                                <option>Papudo</option>
+                                <option>Petorca</option>
+                                <option>Puchuncaví</option>
+                                <option>Putaendo</option>
+                                <option>Quillota</option>
+                                <option>Quilpué</option>
+                                <option>Quintero</option>
+                                <option>Rinconada</option>
+                                <option>San Antonio</option>
+                                <option>San Esteban</option>
+                                <option>San Felipe</option>
+                                <option>Santa María</option>
+                                <option>Santo Domingo</option>
+                                <option>Valparaíso</option>
+                                <option>Villa Alemana</option>
+                                <option>Viña del Mar</option>
+                                <option>Zapallar</option>
+                            </optgroup>
+                            <optgroup label="Metropolitana de Santiago">
+                                <option>Alhué</option>
+                                <option>Buin</option>
+                                <option>Calera de Tango</option>
+                                <option>Cerrillos</option>
+                                <option>Cerro Navia</option>
+                                <option>Colina</option>
+                                <option>Conchalí</option>
+                                <option>Curacaví</option>
+                                <option>El Bosque</option>
+                                <option>El Monte</option>
+                                <option>Estación Central</option>
+                                <option>Huechuraba</option>
+                                <option>Independencia</option>
+                                <option>Isla de Maipo</option>
+                                <option>La Cisterna</option>
+                                <option>La Florida</option>
+                                <option>La Granja</option>
+                                <option>La Pintana</option>
+                                <option>La Reina</option>
+                                <option>Lampa</option>
+                                <option>Las Condes</option>
+                                <option>Lo Barnechea</option>
+                                <option>Lo Espejo</option>
+                                <option>Lo Prado</option>
+                                <option>Macul</option>
+                                <option>Maipú</option>
+                                <option>María Pinto</option>
+                                <option>Melipilla</option>
+                                <option>Ñuñoa</option>
+                                <option>Padre Hurtado</option>
+                                <option>Paine</option>
+                                <option>Pedro Aguirre Cerda</option>
+                                <option>Peñaflor</option>
+                                <option>Peñalolén</option>
+                                <option>Pirque</option>
+                                <option>Providencia</option>
+                                <option>Pudahuel</option>
+                                <option>Puente Alto</option>
+                                <option>Quilicura</option>
+                                <option>Quinta Normal</option>
+                                <option>Recoleta</option>
+                                <option>Renca</option>
+                                <option>San Bernardo</option>
+                                <option>San Joaquín</option>
+                                <option>San José de Maipo</option>
+                                <option>San Miguel</option>
+                                <option>San Pedro</option>
+                                <option>San Ramón</option>
+                                <option>Santiago</option>
+                                <option>Talagante</option>
+                                <option>Tiltil</option>
+                                <option>Vitacura</option>
+                            </optgroup>
+                            <optgroup label="Libertador General Bernardo O'Higgins">
+                                <option>Chimbarongo</option>
+                                <option>Codegua</option>
+                                <option>Coinco</option>
+                                <option>Coltauco</option>
+                                <option>Doñihue</option>
+                                <option>Graneros</option>
+                                <option>La Estrella</option>
+                                <option>Las Cabras</option>
+                                <option>Litueche</option>
+                                <option>Lolol</option>
+                                <option>Machalí</option>
+                                <option>Malloa</option>
+                                <option>Marchihue</option>
+                                <option>Nancagua</option>
+                                <option>Navidad</option>
+                                <option>Olivar</option>
+                                <option>Palmilla</option>
+                                <option>Paredones</option>
+                                <option>Peralillo</option>
+                                <option>Peumo</option>
+                                <option>Pichidegua</option>
+                                <option>Pichilemu</option>
+                                <option>Placilla</option>
+                                <option>Pumanque</option>
+                                <option>Quinta de Tilcoco</option>
+                                <option>Rancagua</option>
+                                <option>Rengo</option>
+                                <option>Requínoa</option>
+                                <option>San Fernando</option>
+                                <option>San Vicente</option>
+                                <option>Santa Cruz</option>
+                            </optgroup>
+                            <optgroup label="Maule">
+                                <option>Cauquenes</option>
+                                <option>Chanco</option>
+                                <option>Colbún</option>
+                                <option>Constitución</option>
+                                <option>Curepto</option>
+                                <option>Curicó</option>
+                                <option>Empedrado</option>
+                                <option>Hualañé</option>
+                                <option>Licantén</option>
+                                <option>Linares</option>
+                                <option>Longaví</option>
+                                <option>Maule</option>
+                                <option>Molina</option>
+                                <option>Parral</option>
+                                <option>Pelarco</option>
+                                <option>Pelluhue</option>
+                                <option>Pencahue</option>
+                                <option>Rauco</option>
+                                <option>Retiro</option>
+                                <option>Romeral</option>
+                                <option>Río Claro</option>
+                                <option>Sagrada Familia</option>
+                                <option>San Clemente</option>
+                                <option>San Javier</option>
+                                <option>San Rafael</option>
+                                <option>Talca</option>
+                                <option>Teno</option>
+                                <option>Vichuquén</option>
+                                <option>Villa Alegre</option>
+                                <option>Yerbas Buenas</option>
+                            </optgroup>
+                            <optgroup label="Ñuble">
+                                <option>Bulnes</option>
+                                <option>Chillán</option>
+                                <option>Chillán Viejo</option>
+                                <option>Cobquecura</option>
+                                <option>Coelemu</option>
+                                <option>Coihueco</option>
+                                <option>El Carmen</option>
+                                <option>Ninhue</option>
+                                <option>Ñiquén</option>
+                                <option>Pemuco</option>
+                                <option>Pinto</option>
+                                <option>Portezuelo</option>
+                                <option>Quillón</option>
+                                <option>Quirihue</option>
+                                <option>Ránquil</option>
+                                <option>San Carlos</option>
+                                <option>San Fabián</option>
+                                <option>San Ignacio</option>
+                                <option>San Nicolás</option>
+                                <option>Treguaco</option>
+                                <option>Yungay</option>
+                            </optgroup>
+                            <optgroup label="Biobío">
+                                <option>Alto Biobío</option>
+                                <option>Antuco</option>
+                                <option>Arauco</option>
+                                <option>Cabrero</option>
+                                <option>Cañete</option>
+                                <option>Chiguayante</option>
+                                <option>Concepción</option>
+                                <option>Contulmo</option>
+                                <option>Coronel</option>
+                                <option>Curanilahue</option>
+                                <option>Florida</option>
+                                <option>Hualpén</option>
+                                <option>Hualqui</option>
+                                <option>Laja</option>
+                                <option>Lebu</option>
+                                <option>Los Álamos</option>
+                                <option>Los Ángeles</option>
+                                <option>Lota</option>
+                                <option>Mulchén</option>
+                                <option>Nacimiento</option>
+                                <option>Negrete</option>
+                                <option>Penco</option>
+                                <option>Quilaco</option>
+                                <option>Quilleco</option>
+                                <option>San Pedro de la Paz</option>
+                                <option>San Rosendo</option>
+                                <option>Santa Bárbara</option>
+                                <option>Santa Juana</option>
+                                <option>Talcahuano</option>
+                                <option>Tirúa</option>
+                                <option>Tomé</option>
+                                <option>Tucapel</option>
+                                <option>Yumbel</option>
+                            </optgroup>
+                            <optgroup label="La Araucanía">
+                                <option>Angol</option>
+                                <option>Carahue</option>
+                                <option>Cholchol</option>
+                                <option>Collipulli</option>
+                                <option>Cunco</option>
+                                <option>Curacautín</option>
+                                <option>Curarrehue</option>
+                                <option>Ercilla</option>
+                                <option>Freire</option>
+                                <option>Galvarino</option>
+                                <option>Gorbea</option>
+                                <option>Lautaro</option>
+                                <option>Loncoche</option>
+                                <option>Lonquimay</option>
+                                <option>Los Sauces</option>
+                                <option>Lumaco</option>
+                                <option>Melipeuco</option>
+                                <option>Nueva Imperial</option>
+                                <option>Padre Las Casas</option>
+                                <option>Perquenco</option>
+                                <option>Pitrufquén</option>
+                                <option>Pucón</option>
+                                <option>Puren</option>
+                                <option>Renaico</option>
+                                <option>Saavedra</option>
+                                <option>Temuco</option>
+                                <option>Teodoro Schmidt</option>
+                                <option>Toltén</option>
+                                <option>Traiguén</option>
+                                <option>Victoria</option>
+                                <option>Vilcún</option>
+                                <option>Villarrica</option>
+                            </optgroup>
+                            <optgroup label="Los Ríos">
+                                <option>Corral</option>
+                                <option>Futrono</option>
+                                <option>La Unión</option>
+                                <option>Lago Ranco</option>
+                                <option>Lanco</option>
+                                <option>Los Lagos</option>
+                                <option>Máfil</option>
+                                <option>Mariquina</option>
+                                <option>Paillaco</option>
+                                <option>Panguipulli</option>
+                                <option>Río Bueno</option>
+                                <option>Valdivia</option>
+                            </optgroup>
+                            <optgroup label="Los Lagos">
+                                <option>Ancud</option>
+                                <option>Calbuco</option>
+                                <option>Castro</option>
+                                <option>Chaitén</option>
+                                <option>Chonchi</option>
+                                <option>Cochamó</option>
+                                <option>Curaco de Vélez</option>
+                                <option>Dalcahue</option>
+                                <option>Fresia</option>
+                                <option>Frutillar</option>
+                                <option>Futaleufú</option>
+                                <option>Hualaihué</option>
+                                <option>Llanquihue</option>
+                                <option>Los Muermos</option>
+                                <option>Maullín</option>
+                                <option>Osorno</option>
+                                <option>Palena</option>
+                                <option>Puerto Montt</option>
+                                <option>Puerto Varas</option>
+                                <option>Puqueldón</option>
+                                <option>Purranque</option>
+                                <option>Puyehue</option>
+                                <option>Queilén</option>
+                                <option>Quellón</option>
+                                <option>Quemchi</option>
+                                <option>Quinchao</option>
+                                <option>Río Negro</option>
+                                <option>San Juan de la Costa</option>
+                                <option>San Pablo</option>
+                            </optgroup>
+                            <optgroup label="Aysén del General Carlos Ibáñez del Campo">
+                                <option>Aysén</option>
+                                <option>Chile Chico</option>
+                                <option>Cisnes</option>
+                                <option>Cochrane</option>
+                                <option>Coihaique</option>
+                                <option>Guaitecas</option>
+                                <option>Lago Verde</option>
+                                <option>O'Higgins</option>
+                                <option>Río Ibáñez</option>
+                                <option>Tortel</option>
+                            </optgroup>
+                            <optgroup label="Magallanes y de la Antártica Chilena">
+                                <option>Antártica</option>
+                                <option>Cabo de Hornos</option>
+                                <option>Laguna Blanca</option>
+                                <option>Natales</option>
+                                <option>Porvenir</option>
+                                <option>Primavera</option>
+                                <option>Punta Arenas</option>
+                                <option>Río Verde</option>
+                                <option>San Gregorio</option>
+                                <option>Timaukel</option>
+                                <option>Torres del Paine</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label>Modelo</label>
+                            <input type="text" placeholder="Corolla" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Color</label>
+                            <input type="text" placeholder="Blanco" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Año</label>
+                        <select required>
+                            <option>2025</option>
+                            <option>2024</option>
+                            <option>2023</option>
+                            <option>2022</option>
+                            <option>2021</option>
+                            <option>2020</option>
+                            <option>2019</option>
+                            <option>2018</option>
+                            <option>2017</option>
+                            <option>2016</option>
+                            <option>2015</option>
+                            <option>2014</option>
+                            <option>2013</option>
+                            <option>2012</option>
+                            <option>2011</option>
+                            <option>2010</option>
+                            <option>2009</option>
+                            <option>2008</option>
+                            <option>2007</option>
+                            <option>2006</option>
+                            <option>2005</option>
+                            <option>2004</option>
+                            <option>2003</option>
+                            <option>2002</option>
+                            <option>2001</option>
+                            <option>2000</option>
+                            <option>1999</option>
+                            <option>1998</option>
+                            <option>1997</option>
+                            <option>1996</option>
+                            <option>1995</option>
+                            <option>1994</option>
+                            <option>1993</option>
+                            <option>1992</option>
+                            <option>1991</option>
+                            <option>1990</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Configuración de precios</label>
+                        <div class="pricing-tabs">
+                            <button type="button" class="pricing-tab active" onclick="switchPriceTab('daily', this)">
+                                <i class="fas fa-calendar-day"></i> Diario
+                            </button>
+                            <button type="button" class="pricing-tab" onclick="switchPriceTab('weekly', this)">
+                                <i class="fas fa-calendar-week"></i> Semanal
+                            </button>
+                            <button type="button" class="pricing-tab" onclick="switchPriceTab('monthly', this)">
+                                <i class="fas fa-calendar-alt"></i> Mensual
+                            </button>
+                        </div>
+                        
+                        <div class="price-input-group">
+                            <div class="price-input-box">
+                                <label><i class="fas fa-calendar-day"></i> Precio por día (CLP)</label>
+                                <input type="number" placeholder="25000" id="dailyPrice" onchange="calculatePrices()">
+                                <p class="price-suggestion">Sugerencia: $20.000 - $35.000</p>
+                            </div>
+                            <div class="price-input-box">
+                                <label><i class="fas fa-calendar-week"></i> Precio por semana (CLP)</label>
+                                <input type="number" placeholder="150000" id="weeklyPrice">
+                                <p class="price-suggestion">Descuento: 10-15%</p>
+                            </div>
+                            <div class="price-input-box">
+                                <label><i class="fas fa-calendar-alt"></i> Precio por mes (CLP)</label>
+                                <input type="number" placeholder="500000" id="monthlyPrice">
+                                <p class="price-suggestion">Descuento: 20-30%</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descripción del vehículo</label>
+                        <textarea rows="4" placeholder="Describe tu auto, estado general, kilometraje, etc." style="width: 100%; padding: 15px; border: 2px solid #e0e0e0; border-radius: 12px;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-clipboard-check"></i> Requisitos para el arrendatario</label>
+                        
+                        <div class="requirements-grid">
+                            <div class="requirement-item">
+                                <input type="checkbox" id="req1" checked>
+                                <label for="req1">Licencia de conducir vigente</label>
+                            </div>
+                            <div class="requirement-item">
+                                <input type="checkbox" id="req2" checked>
+                                <label for="req2">Cédula de identidad</label>
+                            </div>
+                            <div class="requirement-item">
+                                <input type="checkbox" id="req3">
+                                <label for="req3"><i class="fas fa-file-alt"></i> Hoja de vida de conductor</label>
+                            </div>
+                            <div class="requirement-item">
+                                <input type="checkbox" id="req4">
+                                <label for="req4"><i class="fas fa-camera"></i> Fotos del garaje</label>
+                            </div>
+                            <div class="requirement-item">
+                                <input type="checkbox" id="req5">
+                                <label for="req5"><i class="fas fa-user-shield"></i> Garante (aval)</label>
+                            </div>
+                            <div class="requirement-item">
+                                <input type="checkbox" id="req6">
+                                <label for="req6"><i class="fas fa-file-invoice"></i> Factura de luz del domicilio</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visita-domicilio-box">
+                        <i class="fas fa-home"></i>
+                        <div>
+                            <h4><i class="fas fa-search-location"></i> Visita de verificación al domicilio</h4>
+                            <p>
+                                Como medida de seguridad adicional, <strong>se realizará una visita al domicilio 
+                                donde se guardará el auto</strong> para verificar que cuenta con garaje seguro y 
+                                las condiciones adecuadas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Garantía requerida (opcional)</label>
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <input type="number" placeholder="100000" style="flex: 1;">
+                            <span style="color: #666;">CLP</span>
+                        </div>
+                    </div>
+
+                    <div class="contract-section">
+                        <div class="contract-header">
+                            <i class="fas fa-file-contract"></i>
+                            <div>
+                                <h3>Contrato Digital de Arriendo</h3>
+                                <span>OPCIONAL</span>
+                            </div>
+                        </div>
+                        
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                            ¿Quieren mayor seguridad? Generen un <strong>contrato digital validado por abogado</strong>.
+                        </p>
+
+                        <div class="contract-fields">
+                            <div class="contract-field">
+                                <label><i class="fas fa-calendar-alt"></i> Fecha de entrega</label>
+                                <input type="datetime-local">
+                            </div>
+                            <div class="contract-field">
+                                <label><i class="fas fa-undo"></i> Fecha de devolución</label>
+                                <input type="datetime-local">
+                            </div>
+                            <div class="contract-field">
+                                <label><i class="fas fa-map-marker-alt"></i> Ciudad donde trabajará</label>
+                                <input type="text" placeholder="Ej: Santiago">
+                            </div>
+                            <div class="contract-field">
+                                <label><i class="fas fa-money-bill-wave"></i> Precio acordado</label>
+                                <input type="text" placeholder="$150.000">
+                            </div>
+                        </div>
+
+                        <div class="contract-field" style="margin-bottom: 20px;">
+                            <label><i class="fas fa-car-crash"></i> Condiciones del auto / Fallas mecánicas</label>
+                            <textarea rows="3" placeholder="Describa el estado actual del vehículo"></textarea>
+                        </div>
+
+                        <div class="firma-contrato">
+                            <h4><i class="fas fa-pen-fancy"></i> Declaración de entrega de documentos</h4>
+                            <div class="firma-row">
+                                <div class="firma-party">
+                                    <label>Yo (Nombre completo)</label>
+                                    <input type="text" placeholder="Ej: Juan Mendoza">
+                                    <label style="margin-top: 10px;">RUT</label>
+                                    <input type="text" placeholder="12.345.678-9">
+                                </div>
+                                <div class="firma-arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                                <div class="firma-party">
+                                    <label>Entrego a (Nombre completo)</label>
+                                    <input type="text" placeholder="Ej: Luis Guillermo">
+                                    <label style="margin-top: 10px;">RUT</label>
+                                    <input type="text" placeholder="9.876.543-2">
+                                </div>
+                            </div>
+                            <p style="text-align: center; color: #666; font-size: 0.9rem; font-style: italic;">
+                                Los siguientes documentos: Permiso de circulación, SOAP vigente, Revisión técnica
+                            </p>
+                        </div>
+
+                        <div class="contract-clauses">
+                            <h4><i class="fas fa-balance-scale"></i> Cláusulas legales</h4>
+                            
+                            <div class="clause-item warning">
+                                <h5><i class="fas fa-exclamation-triangle"></i> FALLAS MECÁNICAS DURANTE EL ARRIENDO</h5>
+                                <p>
+                                    Si durante el período de arriendo el vehículo presentara <strong>fallas mecánicas de cualquier índole</strong>, 
+                                    el arrendatario debe <strong>NOTIFICAR INMEDIATAMENTE AL DUEÑO</strong> y <strong>NO continuar 
+                                    usando el vehículo</strong> para evitar mayores daños. El auto deberá ser:
+                                </p>
+                                <ul style="margin-top: 10px; padding-left: 20px; color: #666;">
+                                    <li>Llevado al taller mecánico de confianza del <strong>PROPIO DUEÑO</strong>, o</li>
+                                    <li><strong>DEVUELTO AL DUEÑO LO ANTES POSIBLE</strong> si la falla lo impide</li>
+                                </ul>
+                                <p style="margin-top: 10px;">
+                                    <strong>El arrendatario no podrá realizar reparaciones por su cuenta</strong> sin autorización 
+                                    expresa del dueño. Cualquier daño ocasionado por continuar usando el vehículo con fallas 
+                                    conocidas será de <strong>responsabilidad exclusiva del arrendatario</strong>.
+                                </p>
+                            </div>
+
+                            <div class="clause-item danger">
+                                <h5><i class="fas fa-hand-holding-usd"></i> INCUMPLIMIENTO DE PAGO</h5>
+                                <p>
+                                    En caso de no cancelar el monto acordado en los plazos establecidos (días u horas), 
+                                    <strong>LA GARANTÍA SERÁ UTILIZADA COMO PAGO</strong> por el retraso. Se iniciará 
+                                    inmediatamente la búsqueda del arrendatario para la devolución del vehículo. 
+                                    <strong>En caso de no aparecer o negarse a devolver el auto, se llamará a CARABINEROS 
+                                    DE CHILE</strong> y se procederá con denuncias por apropiación indebida y estafa.
+                                </p>
+                            </div>
+
+                            <div class="clause-item danger">
+                                <h5><i class="fas fa-clock"></i> RETRASO EN DEVOLUCIÓN</h5>
+                                <p>
+                                    La devolución fuera del plazo generará el cobro de <strong>UN DÍA COMPLETO DE ARRIENDO</strong> 
+                                    por cada día de retraso, descontado de la garantía o pagado aparte. Pasadas 24 horas sin 
+                                    comunicación, se considerará apropiación indebida.
+                                </p>
+                            </div>
+
+                            <div class="clause-item danger">
+                                <h5><i class="fas fa-map-marked-alt"></i> USO TERRITORIAL</h5>
+                                <p>
+                                    El vehículo debe permanecer en <strong>TERRITORIO CHILENO</strong> y en la <strong>CIUDAD 
+                                    ACORDADA</strong>. Si necesita trasladarse a otra ciudad, <strong>DEBE NOTIFICAR AL DUEÑO 
+                                    PREVIAMENTE</strong>. De lo contrario, en caso de robo del vehículo, <strong>LA COBERTURA 
+                                    DE SEGURO PODRÍA QUEDAR SIN EFECTO</strong>, siendo el arrendatario responsable del valor 
+                                    completo del auto.
+                                </p>
+                            </div>
+
+                            <div class="clause-item success">
+                                <h5><i class="fas fa-undo-alt"></i> DEVOLUCIÓN DE GARANTÍA</h5>
+                                <p>
+                                    La garantía será devuelta <strong>EN EL MOMENTO EXACTO DE LA ENTREGA DEL AUTO</strong>, 
+                                    siempre y cuando: (1) El vehículo haya sido devuelto en las condiciones acordadas, 
+                                    (2) Sin daños, (3) Con el combustible al nivel inicial, (4) Dentro del plazo establecido, y 
+                                    (5) <strong>Sin fallas mecánicas ocasionadas por mal uso</strong>. La devolución se hará 
+                                    en efectivo o transferencia inmediata, previa inspección del vehículo.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contract-disclaimer">
+                            <i class="fas fa-info-circle"></i>
+                            <div>
+                                <p style="margin-bottom: 10px;">
+                                    <strong>Este contrato es OPCIONAL.</strong> Solo se generará si <strong>ambas partes</strong> lo solicitan.
+                                </p>
+                                <p>
+                                    <i class="fas fa-check-circle" style="color: var(--success);"></i> 
+                                    Validado por abogado especialista.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 25px; display: flex; align-items: center; gap: 15px;">
+                            <input type="checkbox" id="activarContrato" style="width: 20px; height: 20px;">
+                            <label for="activarContrato" style="margin: 0; cursor: pointer;">
+                                <strong>Solicitar contrato digital</strong> para este arriendo
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="safety-banner">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Seguridad primero</h4>
+                            <p>No compartas documentos sensibles por chat. Entrega presencial únicamente.</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.1rem;">
+                        <i class="fas fa-check"></i> Publicar Auto
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: DETALLE AUTO -->
+    <div id="detalle-auto" class="page">
+        <div class="dashboard-container">
+            <div style="background: white; border-radius: 20px; overflow: hidden;">
+                <div style="height: 400px; position: relative;">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200" style="width: 100%; height: 100%; object-fit: cover;" alt="Auto">
+                    <button onclick="showPage('search-autos')" style="position: absolute; top: 20px; left: 20px; background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer;">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <div style="position: absolute; top: 20px; right: 20px;">
+                        <span class="city-badge">
+                            <i class="fas fa-map-marker-alt"></i> Santiago
+                        </span>
+                    </div>
+                </div>
+                
+                <div style="padding: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 30px;">
+                        <div>
+                            <h1 style="font-size: 2.5rem; margin-bottom: 10px;">Toyota Corolla 2020</h1>
+                            <p style="color: #666;"><i class="fas fa-map-marker-alt"></i> Ñuñoa, Santiago</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-size: 2rem; font-weight: 800; color: var(--chile-red);">$25.000<span style="font-size: 1rem; color: #666;">/día</span></div>
+                            <div style="font-size: 1.3rem; color: var(--success); margin-top: 5px;">$150.000<span style="font-size: 0.9rem; color: #666;">/sem</span></div>
+                            <div style="font-size: 1.1rem; color: var(--info); margin-top: 5px;">$500.000<span style="font-size: 0.85rem; color: #666;">/mes</span></div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+                        <div>
+                            <h3 style="margin-bottom: 20px;">Características</h3>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 30px;">
+                                <div style="background: #f8f9fa; padding: 20px; border-radius: 15px; text-align: center;">
+                                    <i class="fas fa-gas-pump" style="font-size: 1.5rem; color: var(--chile-red); margin-bottom: 10px;"></i>
+                                    <p>Bencina</p>
+                                </div>
+                                <div style="background: #f8f9fa; padding: 20px; border-radius: 15px; text-align: center;">
+                                    <i class="fas fa-cog" style="font-size: 1.5rem; color: var(--chile-red); margin-bottom: 10px;"></i>
+                                    <p>Automático</p>
+                                </div>
+                                <div style="background: #f8f9fa; padding: 20px; border-radius: 15px; text-align: center;">
+                                    <i class="fas fa-user" style="font-size: 1.5rem; color: var(--chile-red); margin-bottom: 10px;"></i>
+                                    <p>5 pasajeros</p>
+                                </div>
+                            </div>
+
+                            <h3 style="margin-bottom: 20px;">Requisitos del dueño</h3>
+                            <ul style="list-style: none; margin-bottom: 30px;">
+                                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i> Licencia vigente</li>
+                                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i> Cédula de identidad</li>
+                                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i> Hoja de vida de conductor</li>
+                                <li style="padding: 10px 0; border-bottom: 1px solid #eee;"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i> Fotos del garaje</li>
+                                <li style="padding: 10px 0;"><i class="fas fa-check-circle" style="color: var(--success); margin-right: 10px;"></i> Garantía: $100.000</li>
+                            </ul>
+
+                            <div style="background: #f0f0f0; border-radius: 15px; padding: 20px; margin-bottom: 20px;">
+                                <h4 style="color: #8e44ad; margin-bottom: 15px;"><i class="fas fa-file-contract"></i> Contrato digital disponible</h4>
+                                <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">
+                                    Este arrendador ofrece la opción de firmar un <strong>contrato digital validado por abogado</strong>.
+                                </p>
+                            </div>
+
+                            <div class="safety-banner">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Seguridad</h4>
+                                    <p>No compartas documentos por chat. Entrega presencial.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="background: #f8f9fa; border-radius: 20px; padding: 30px;">
+                                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" style="width: 70px; height: 70px; border-radius: 50%;" alt="Dueño">
+                                    <div>
+                                        <h4>Juan Pérez</h4>
+                                        <span class="verified-badge"><i class="fas fa-check-circle"></i> Verificado</span>
+                                    </div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                                        <i class="fas fa-star" style="color: var(--warning);"></i>
+                                        <strong>4.9</strong>
+                                        <span style="color: #666;">(12 reseñas)</span>
+                                    </div>
+                                    <p style="font-size: 0.9rem; color: #666;">Miembro desde 2024</p>
+                                </div>
+                                <button class="btn btn-primary" style="width: 100%;" onclick="showPage('solicitud-enviada')">
+                                    <i class="fas fa-paper-plane"></i> Solicitar Arriendo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: SOLICITUD ENVIADA -->
+    <div id="solicitud-enviada" class="page">
+        <div class="auth-container">
+            <div class="auth-box fade-in" style="text-align: center;">
+                <div class="success-check">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <h2>¡Solicitud enviada!</h2>
+                <p style="color: #666; margin-bottom: 30px;">
+                    Espera a que el dueño revise y acepte tu solicitud.
+                </p>
+
+                <div style="background: #f8f9fa; border-radius: 15px; padding: 25px; margin-bottom: 30px; text-align: left;">
+                    <h4 style="margin-bottom: 15px; color: var(--chile-red);">
+                        <i class="fas fa-info-circle"></i> Próximos pasos:
+                    </h4>
+                    <ol style="padding-left: 20px; color: #666; line-height: 2;">
+                        <li>El dueño revisará tu perfil</li>
+                        <li>Si acepta, se habilita el chat</li>
+                        <li>Acuerdan lugar y hora</li>
+                        <li>Entregas garantía presencial</li>
+                    </ol>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%;" onclick="showPage('dashboard-arrendatario')">
+                    <i class="fas fa-arrow-right"></i> Ver mis solicitudes
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE: CHAT -->
+    <div id="chat" class="page">
+        <div class="dashboard-container">
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <div style="padding: 20px; border-bottom: 1px solid #eee;">
+                        <h3>Mensajes</h3>
+                    </div>
+                    <div class="chat-user active">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Usuario">
+                        <div>
+                            <strong>Juan Pérez</strong>
+                            <p style="font-size: 0.85rem; color: var(--chile-red);">Toyota Corolla</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-main">
+                    <div class="chat-header">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" style="width: 50px; height: 50px; border-radius: 50%;" alt="Usuario">
+                        <div>
+                            <h4>Juan Pérez - Toyota Corolla</h4>
+                            <span class="verified-badge"><i class="fas fa-check-circle"></i> Dueño verificado</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages">
+                        <div style="text-align: center; margin: 20px 0;">
+                            <span style="background: #e0e0e0; padding: 8px 15px; border-radius: 15px; font-size: 0.85rem; color: #666;">
+                                <i class="fas fa-check-circle" style="color: var(--success);"></i> Solicitud aceptada
+                            </span>
+                        </div>
+                        <div class="message received">
+                            <p>¡Hola! Gracias por tu interés. ¿Tienes experiencia manejando?</p>
+                            <span style="font-size: 0.75rem; color: #999; display: block; margin-top: 5px;">10:30</span>
+                        </div>
+                        <div class="message sent">
+                            <p>Sí, manejo hace 5 años. Necesito el auto para el finde.</p>
+                            <span style="font-size: 0.75rem; color: rgba(255,255,255,0.7); display: block; margin-top: 5px;">10:32</span>
+                        </div>
+                    </div>
+
+                    <div style="background: #fff3cd; padding: 15px 20px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-shield-alt" style="color: #856404;"></i>
+                        <p style="font-size: 0.85rem; color: #856404; margin: 0;">
+                            No compartas documentos sensibles aquí.
+                        </p>
+                    </div>
+
+                    <div class="chat-input">
+                        <input type="text" placeholder="Escribe un mensaje...">
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DE RECORDATORIOS -->
+    <div class="reminders-container" id="remindersContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

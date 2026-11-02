@@ -1,5 +1,12 @@
-// Navigation
-function showPage(pageId) {
+let paginaActual = 'landing';
+let historialPaginas = [];
+
+function showPage(pageId, sinHistorial) {
+    if (!sinHistorial && pageId !== paginaActual) {
+        historialPaginas.push(paginaActual);
+    }
+    paginaActual = pageId;
+
     document.querySelectorAll('.page').forEach(page => {
         page.classList.remove('active');
     });
@@ -17,6 +24,12 @@ function showPage(pageId) {
     if (pageId === 'dashboard-arrendador') {
         setTimeout(showReminders, 1000);
     }
+}
+
+function volver() {
+    let anterior = historialPaginas.pop();
+    if (!anterior) anterior = 'landing';
+    showPage(anterior, true);
 }
 
 function logout() {
@@ -252,5 +265,5 @@ function switchPriceTab(type, btn) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    showPage('landing');
+    showPage('landing', true);
 });

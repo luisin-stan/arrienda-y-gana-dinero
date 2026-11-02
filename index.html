@@ -250,6 +250,9 @@
 
     <!-- PAGE: LOGIN CON VERIFICACIÓN SMS -->
     <div id="login" class="page">
+        <a href="#" onclick="showPage('landing'); return false;" style="position: fixed; top: 90px; left: 20px; z-index: 1000; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
         <div class="auth-container">
             <div class="auth-box fade-in">
                 <div style="text-align: center; margin-bottom: 20px;">
@@ -301,8 +304,11 @@
         </div>
     </div>
 
-    <!-- PAGE: REGISTER CON TODAS LAS CIUDADES DE CHILE -->
+    <!-- PAGE: REGISTER -->
     <div id="register" class="page">
+        <a href="#" onclick="showPage('landing'); return false;" style="position: fixed; top: 90px; left: 20px; z-index: 1000; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
         <div class="auth-container">
             <div class="auth-box fade-in" style="max-width: 500px;">
                 <div style="text-align: center; margin-bottom: 20px;">
@@ -738,6 +744,9 @@
 
     <!-- PAGE: PHOTO UPLOAD -->
     <div id="photo-upload" class="page">
+        <a href="#" onclick="showPage('register'); return false;" style="position: fixed; top: 90px; left: 20px; z-index: 1000; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
         <div class="photo-upload-container">
             <div class="photo-upload-box fade-in">
                 <h2>Foto de Perfil</h2>
@@ -769,6 +778,9 @@
 
     <!-- PAGE: LIVENESS -->
     <div id="liveness" class="page">
+        <a href="#" onclick="showPage('photo-upload'); return false;" style="position: fixed; top: 90px; left: 20px; z-index: 1000; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
         <div class="liveness-container">
             <div class="liveness-box fade-in">
                 <h2>Verificación de identidad</h2>
@@ -784,9 +796,6 @@
                 </div>
 
                 <div class="liveness-actions">
-                    <button class="btn btn-outline" style="color: white; border-color: white;" onclick="showPage('photo-upload')">
-                        <i class="fas fa-arrow-left"></i> Volver
-                    </button>
                     <button class="btn btn-primary" onclick="completeVerification()">
                         <i class="fas fa-check"></i> Verificar
                     </button>
@@ -822,6 +831,9 @@
 
     <!-- PAGE: SELECCIÓN DE ROL -->
     <div id="role-selection" class="page">
+        <a href="#" onclick="showPage('landing'); return false;" style="position: fixed; top: 90px; left: 20px; z-index: 1000; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
         <div class="role-selection">
             <div class="role-container fade-in">
                 <div class="role-header">
@@ -878,6 +890,9 @@
     <!-- PAGE: DASHBOARD ARRENDATARIO -->
     <div id="dashboard-arrendatario" class="page">
         <div class="dashboard-container">
+            <a href="#" onclick="showPage('landing'); return false;" style="display: inline-block; margin-bottom: 20px; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
             <div class="dashboard-header">
                 <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Perfil" class="profile-photo">
                 <div class="profile-info">
@@ -1005,6 +1020,9 @@
     <!-- PAGE: SEARCH AUTOS -->
     <div id="search-autos" class="page">
         <div class="dashboard-container">
+            <a href="#" onclick="showPage('dashboard-arrendatario'); return false;" style="display: inline-block; margin-bottom: 20px; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
             <div class="city-filter-section">
                 <h3><i class="fas fa-map-marker-alt"></i> Selecciona tu ciudad</h3>
                 <p style="color: #666; margin-bottom: 20px;">Solo se mostrarán autos disponibles en la ciudad que selecciones</p>
@@ -1062,6 +1080,9 @@
     <!-- PAGE: DASHBOARD ARRENDADOR -->
     <div id="dashboard-arrendador" class="page">
         <div class="dashboard-container">
+            <a href="#" onclick="showPage('landing'); return false;" style="display: inline-block; margin-bottom: 20px; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <i class="fas fa-arrow-left"></i> Volver al inicio
+            </a>
             <div class="dashboard-header">
                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Perfil" class="profile-photo">
                 <div class="profile-info">
@@ -1451,7 +1472,10 @@
     <!-- PAGE: PUBLICAR AUTO -->
     <div id="publicar-auto" class="page">
         <div class="dashboard-container">
-            <div class="main-content" style="max-width: 900px; margin: 40px auto;">
+            <a href="#" onclick="showPage('dashboard-arrendador'); return false;" style="display: inline-block; margin-bottom: 20px; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
+            <div class="main-content" style="max-width: 900px; margin: 0 auto;">
                 <h2 style="margin-bottom: 30px;"><i class="fas fa-car"></i> Publicar mi auto</h2>
                 
                 <form onsubmit="handlePublicar(event)">
@@ -2222,12 +2246,12 @@
     <!-- PAGE: DETALLE AUTO -->
     <div id="detalle-auto" class="page">
         <div class="dashboard-container">
+            <a href="#" onclick="showPage('search-autos'); return false;" style="display: inline-block; margin-bottom: 20px; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
             <div style="background: white; border-radius: 20px; overflow: hidden;">
                 <div style="height: 400px; position: relative;">
                     <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=1200" style="width: 100%; height: 100%; object-fit: cover;" alt="Auto">
-                    <button onclick="showPage('search-autos')" style="position: absolute; top: 20px; left: 20px; background: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer;">
-                        <i class="fas fa-arrow-left"></i>
-                    </button>
                     <div style="position: absolute; top: 20px; right: 20px;">
                         <span class="city-badge">
                             <i class="fas fa-map-marker-alt"></i> Santiago
@@ -2353,6 +2377,9 @@
     <!-- PAGE: CHAT -->
     <div id="chat" class="page">
         <div class="dashboard-container">
+            <a href="#" onclick="showPage('dashboard-arrendador'); return false;" style="display: inline-block; margin-bottom: 20px; background: white; color: #D52B1E; border: 2px solid #D52B1E; padding: 10px 20px; border-radius: 50px; font-weight: 600; text-decoration: none; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
             <div class="chat-container">
                 <div class="chat-sidebar">
                     <div style="padding: 20px; border-bottom: 1px solid #eee;">

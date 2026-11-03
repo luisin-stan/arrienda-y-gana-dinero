@@ -102,6 +102,42 @@ function startCamera() {
     }
 }
 
+function iniciarVerificacion() {
+    const btn = document.getElementById('btnLiveness');
+    const inst = document.getElementById('instruction');
+    const barra = document.getElementById('progresoLiveness');
+    const fill = document.getElementById('progresoFill');
+
+    const secuencia = [
+        'Gira tu cabeza lentamente a la izquierda',
+        'Ahora gira lentamente a la derecha',
+        'Mira hacia arriba',
+        'Mira hacia abajo',
+        'Mira directo al centro'
+    ];
+
+    btn.style.display = 'none';
+    barra.style.display = 'block';
+    let i = 0;
+    const total = secuencia.length;
+
+    function paso() {
+        if (i < total) {
+            inst.innerHTML = '<i class="fas fa-arrows-alt-h"></i> ' + secuencia[i];
+            fill.style.width = Math.round(((i + 1) / total) * 100) + '%';
+            i++;
+            setTimeout(paso, 2500);
+        } else {
+            inst.innerHTML = '✓ Verificación completada';
+            inst.style.color = '#28a745';
+            btn.style.display = 'inline-block';
+            btn.innerHTML = '<i class="fas fa-check"></i> Finalizar';
+            btn.onclick = completeVerification;
+        }
+    }
+    paso();
+}
+
 function completeVerification() {
     showPage('registro-exitoso');
 }

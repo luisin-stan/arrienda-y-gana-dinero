@@ -2299,3 +2299,69 @@ body {
     border-left: 4px solid var(--success);
 }
 .modal-lista-item span { color: #888; font-size: 0.85rem; }
+/* ===== RESPONSIVE MÓVIL ===== */
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+
+@media (max-width: 768px) {
+    .dashboard-container { padding: 85px 14px 30px; }
+    .main-content { padding: 20px; }
+    .dashboard-header {
+        flex-direction: column !important;
+        text-align: center;
+        align-items: center !important;
+    }
+    .dashboard-header > div:last-child {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+    .dashboard-header > div:last-child .btn { width: 100%; }
+    .profile-info { text-align: center; }
+    .profile-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px !important;
+    }
+
+    /* Forzar a 1 columna los grids que estaban en el HTML */
+    div[style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns: 2fr 1fr"] { grid-template-columns: 1fr !important; }
+    div[style*="repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
+    div[style*="repeat(2, 1fr)"] { grid-template-columns: 1fr !important; }
+
+    .hero { padding: 100px 5% 60px; }
+    .hero-cta { flex-direction: column; }
+    .hero-cta .btn { width: 100%; }
+    .btn-large { padding: 16px 24px; font-size: 1rem; }
+
+    .stats-bar { gap: 25px; padding: 30px 5%; }
+    .stat-number { font-size: 2rem; }
+
+    .hero-images { grid-template-columns: repeat(2, 1fr) !important; gap: 10px; }
+    .feature-card, .step-card { padding: 25px 20px; }
+
+    .request-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .request-actions { width: 100%; }
+    .request-actions button { flex: 1; }
+
+    .maintenance-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .settings-item { padding: 18px; }
+
+    .car-earnings-header { flex-direction: column; text-align: center; }
+    .earnings-stats-grid { gap: 10px; }
+    .car-price { font-size: 0.85rem; padding: 6px 14px; }
+
+    .modal-box { padding: 22px; }
+    .modal-foto { width: 90px; height: 90px; }
+
+    .chat-header { flex-wrap: wrap; }
+    .modal-lista-item { padding: 12px; }
+}

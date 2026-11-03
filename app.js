@@ -303,3 +303,9 @@ function switchPriceTab(type, btn) {
 document.addEventListener('DOMContentLoaded', function() {
     showPage('landing', true);
 });
+function abrirModal(id) {
+    document.getElementById(id).classList.add('active');
+}
+function cerrarModal(id) {
+    document.getElementById(id).classList.remove('active');
+}

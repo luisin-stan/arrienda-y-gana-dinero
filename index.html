@@ -787,17 +787,21 @@
                 <p style="color: rgba(255,255,255,0.7);">Paso 3 de 3: Confirma que eres tú</p>
                 
                 <div class="camera-preview">
-                    <video id="video" autoplay playsinline></video>
+                    <video id="video" autoplay playsinline muted></video>
                     <div class="face-overlay"></div>
                 </div>
 
                 <div class="liveness-instruction" id="instruction">
-                    <i class="fas fa-head-side-view"></i> Gira tu cabeza lentamente a la derecha
+                    <i class="fas fa-play-circle"></i> Presiona "Iniciar verificación"
+                </div>
+
+                <div id="progresoLiveness" style="display:none; margin: 20px auto; width: 80%; max-width: 350px; height: 8px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden;">
+                    <div id="progresoFill" style="height:100%; width:0; background:#28a745; transition: width 0.5s;"></div>
                 </div>
 
                 <div class="liveness-actions">
-                    <button class="btn btn-primary" onclick="completeVerification()">
-                        <i class="fas fa-check"></i> Verificar
+                    <button class="btn btn-primary" id="btnLiveness" onclick="iniciarVerificacion()">
+                        <i class="fas fa-play"></i> Iniciar verificación
                     </button>
                 </div>
 
@@ -807,7 +811,6 @@
             </div>
         </div>
     </div>
-
     <!-- PAGE: REGISTRO EXITOSO -->
     <div id="registro-exitoso" class="page">
         <div class="auth-container">
